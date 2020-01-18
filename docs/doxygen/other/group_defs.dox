@@ -1,0 +1,7 @@
+/*!
+ * \defgroup block GNU Radio SATCOM_GMU C++ Signal Processing Blocks
+ * \brief All C++ blocks that can be used from the SATCOM_GMU GNU Radio
+ *        module are listed here or in the subcategories below.
+ *
+ */
+
