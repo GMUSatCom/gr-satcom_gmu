@@ -22,7 +22,7 @@
 import numpy as np
 from gnuradio import gr
 import pmt
-from utils import SignalField
+from utils import SignalField,convolutional_encoder,interleaver,puncturer
 class signal_field_preamble(gr.sync_block):
     """
     docstring for block signal_field_preamble
@@ -44,6 +44,11 @@ class signal_field_preamble(gr.sync_block):
             l = len(pmt.u32vector_elements(mpdu))
         self.outputs.append(SignalField(20,6,l))
 
+    def prepare_signal(self,bit_arr):
+        output = convolutional_encoder(bit_arr)
+        output = interleaver(output,False,48,2)
+        
+        return 0
     def work(self, input_items, output_items):
         out = output_items[0]
         consumed = 0
