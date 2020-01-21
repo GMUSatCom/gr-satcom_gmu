@@ -35,7 +35,8 @@ GR_PYTHON_INSTALL(
     short_field_preamble.py
     long_field_preamble.py
     utils.py
-    signal_field_preamble.py DESTINATION ${GR_PYTHON_DIR}/satcom_gmu
+    signal_field_preamble.py
+    DESTINATION ${GR_PYTHON_DIR}/satcom_gmu
 )
 
 ########################################################################

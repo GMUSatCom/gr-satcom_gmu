@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <block>
-  <name>signal_field_preamble</name>
+  <name>Signal Field Premble</name>
   <key>satcom_gmu_signal_field_preamble</key>
   <category>[satcom_gmu]</category>
   <import>import satcom_gmu</import>
@@ -29,6 +29,6 @@
        * optional (set to 1 for optional inputs) -->
   <source>
     <name>out</name>
-    <type>complex<!-- e.g. int, float, complex, byte, short, xxx_vector, ...--></type>
+    <type>byte<!-- e.g. int, float, complex, byte, short, xxx_vector, ...--></type>
   </source>
 </block>

@@ -31,9 +31,11 @@ class signal_field_preamble(gr.sync_block):
         gr.sync_block.__init__(self,
             name="signal_field_preamble",
             in_sig=None,
-            out_sig=[np.complex64])
+            out_sig=[np.uint8])
         self.pdus = []
         self.outputs = []
+        self.packet_cnt = 0
+        self.packet_len = 48
         self.message_port_register_in(pmt.intern("MPDU"))
         self.set_msg_handler(pmt.intern('MPDU'),self.incoming_MPDU)
 
@@ -42,21 +44,37 @@ class signal_field_preamble(gr.sync_block):
         # set a attribute so next time work is called you produce a Signal Field
         if pmt.is_u32vector(mpdu):
             l = len(pmt.u32vector_elements(mpdu))
-        self.outputs.append(SignalField(20,6,l))
+            s = SignalField(20,36,l)
+            s = self.prepare_signal(s.encode())
+            self.outputs.extend(s)
+
 
     def prepare_signal(self,bit_arr):
+        print("signal raw, len: {}".format(len(bit_arr)))
+        print(bit_arr)
         output = convolutional_encoder(bit_arr)
+        print("convolution, len: {}".format(len(output)))
+        print(output)
         output = interleaver(output,False,48,2)
-        
-        return 0
+        print("interleaving".format(len(output)))
+        print(output)
+        return output
+
     def work(self, input_items, output_items):
+        if len(self.outputs) != 0:
+            print("work called. outputs = {}".format(self.outputs))
         out = output_items[0]
-        consumed = 0
-        # <+signal processing here+>
+        produced = 0
+        if self.nitems_written(0) == 0:
+            self.add_item_tag(0,0,pmt.intern("packet_len"),pmt.from_long(self.packet_len))
         for o in range(0,len(out)):
-            if len(self.outputs):
-                out[o] = self.outputs[0]
+            if len(self.outputs) > 0:
+                if self.packet_cnt == self.packet_len:
+                    self.packet_cnt = 0
+                    self.add_item_tag(0,self.nitems_written(0) + o,pmt.intern("packet_len"),pmt.from_long(self.packet_len))
+                out[o] = np.uint8(self.outputs[0])
                 self.outputs.pop(0)
-                consumed += 1
-        return consumed
+                produced += 1
+                self.packet_cnt += 1
+        return produced
 

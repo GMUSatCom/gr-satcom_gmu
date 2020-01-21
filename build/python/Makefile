@@ -101,17 +101,16 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
 
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -124,16 +123,17 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
 
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,19 +168,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-python/CMakeFiles/pygen_python_91be7.dir/rule:
-	cd /home/mattias/Desktop/gr-satcom_gmu/build && $(MAKE) -f CMakeFiles/Makefile2 python/CMakeFiles/pygen_python_91be7.dir/rule
-.PHONY : python/CMakeFiles/pygen_python_91be7.dir/rule
+python/CMakeFiles/pygen_python_814fc.dir/rule:
+	cd /home/mattias/Desktop/gr-satcom_gmu/build && $(MAKE) -f CMakeFiles/Makefile2 python/CMakeFiles/pygen_python_814fc.dir/rule
+.PHONY : python/CMakeFiles/pygen_python_814fc.dir/rule
 
 # Convenience name for target.
-pygen_python_91be7: python/CMakeFiles/pygen_python_91be7.dir/rule
+pygen_python_814fc: python/CMakeFiles/pygen_python_814fc.dir/rule
 
-.PHONY : pygen_python_91be7
+.PHONY : pygen_python_814fc
 
 # fast build rule for target.
-pygen_python_91be7/fast:
-	cd /home/mattias/Desktop/gr-satcom_gmu/build && $(MAKE) -f python/CMakeFiles/pygen_python_91be7.dir/build.make python/CMakeFiles/pygen_python_91be7.dir/build
-.PHONY : pygen_python_91be7/fast
+pygen_python_814fc/fast:
+	cd /home/mattias/Desktop/gr-satcom_gmu/build && $(MAKE) -f python/CMakeFiles/pygen_python_814fc.dir/build.make python/CMakeFiles/pygen_python_814fc.dir/build
+.PHONY : pygen_python_814fc/fast
 
 # Help Target
 help:
@@ -192,10 +192,10 @@ help:
 	@echo "... install/local"
 	@echo "... test"
 	@echo "... list_install_components"
-	@echo "... pygen_python_91be7"
-	@echo "... install"
-	@echo "... edit_cache"
+	@echo "... pygen_python_814fc"
 	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... install"
 .PHONY : help
 
 

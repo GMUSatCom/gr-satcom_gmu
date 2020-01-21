@@ -42,6 +42,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/home/mattias/Desktop/gr-satcom_gmu/grc/satcom_gmu_short_field_preamble.xml"
     "/home/mattias/Desktop/gr-satcom_gmu/grc/satcom_gmu_long_field_preamble.xml"
     "/home/mattias/Desktop/gr-satcom_gmu/grc/satcom_gmu_signal_field_preamble.xml"
+    "/home/mattias/Desktop/gr-satcom_gmu/grc/satcom_gmu_short_field_object.xml"
     )
 endif()
 

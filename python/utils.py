@@ -2,6 +2,22 @@
 import numpy as np
 from bitarray import bitarray
 
+class ShortField:
+    def __init__(self):
+        self.sequence = np.array([1,-1,1,-1,-1,1,-1,-1,1,1,1,1] ,dtype=np.complex64) * complex(1,1) * 1.472
+        # the constant 1.472 is sqrt(13/6) in some places in the documentation
+        self.subcarriers= ([-24,-20,-16,-12,-8,-4,4,8,12,16,20,24],)
+        self.subcarrier_count = 12
+        self.periodic_extend_to = 161
+
+class LongField:
+    def __init__(self):
+        self.sequence = np.array([1, 1,-1,-1,1,1,-1,1,-1,1,1,1,1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, -1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, -1, 1, 1, 1, 1],dtype=np.complex64)
+        self.subcarriers = (range(-26,0) + range(1,27),)
+        self.subcarriers_count = 52
+        self.cyclic_prefix = 64/4
+        self.periodic_extend_to = 161
+
 
 class SignalField:
     valid_bws = [20,10,5]
@@ -34,8 +50,8 @@ class SignalField:
     def encode(self):
         # calculate parity
         rate = bitarray(self.rate_dict[(self.bw,self.rate)])
-        r = bitarray(False)
-        length = bitarray("{0:0>10b}".format(3)[::-1],endian='big')
+        r = bitarray([False])
+        length = bitarray("{0:0>12b}".format(self.length)[::-1],endian='big')
         first_part = rate + r + length
         count = 0
         parity = False
@@ -44,7 +60,7 @@ class SignalField:
                 count += 1
         if count % 2: 
             parity = True
-        return rate + r + length + bitarray(parity) + bitarray(self.signal_tail)
+        return rate + r + length + bitarray([parity]) + bitarray(self.signal_tail)
 
     def parse(self):
         # implement later
@@ -67,7 +83,11 @@ def convolutional_encoder(input):
         state.insert(0,b)
         state.pop()
         # switch from hardcoding these values
+        #                                      1011011 orig
+        #                                      1101101
         output.append(parity(state & bitarray('1011011'))) # wifi standard octal numbers 0133 and 0171
+        #                                      1111001 orig                                      
+        #                                      1001111                                      
         output.append(parity(state & bitarray('1111001')))
     return output
 
@@ -122,11 +142,13 @@ def interleaver(input,reverse,ncbps,nbpsc):
             else:
                 out[i * ncbps + k] = input[i * ncbps + second[first[k]]]
     return out
+
+
 if __name__ == "__main__":
     input = bitarray('101100010011000000000000')
     assert(len(input) == 24)
     c = convolutional_encoder(input)
     assert(len(c) == 48)
     i = interleaver(c,False,48,2)
-    print(i)
+    print(bytearray(i.tobytes())[1])
     assert(i == bitarray('100101001101000000010100100000110010010010010100'))
