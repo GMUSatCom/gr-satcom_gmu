@@ -50,19 +50,17 @@ class signal_field_preamble(gr.sync_block):
 
 
     def prepare_signal(self,bit_arr):
-        print("signal raw, len: {}".format(len(bit_arr)))
-        print(bit_arr)
+        # print("signal raw, len: {}".format(len(bit_arr)))
+        # print(bit_arr)
         output = convolutional_encoder(bit_arr)
-        print("convolution, len: {}".format(len(output)))
-        print(output)
+        # print("convolution, len: {}".format(len(output)))
+        # print(output)
         output = interleaver(output,False,48,2)
-        print("interleaving".format(len(output)))
-        print(output)
+        # print("interleaving".format(len(output)))
+        # print(output)
         return output
 
     def work(self, input_items, output_items):
-        if len(self.outputs) != 0:
-            print("work called. outputs = {}".format(self.outputs))
         out = output_items[0]
         produced = 0
         if self.nitems_written(0) == 0:

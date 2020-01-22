@@ -31,20 +31,30 @@ except ImportError:
 	pass
 
 # import any pure python here
-from short_field_preamble import short_field_preamble
-from long_field_preamble import long_field_preamble
+
+
 from signal_field_preamble import signal_field_preamble
-
-
-
-
-
-
-
-
+from tagged_sequence_repeater import tagged_sequence_repeater
 from short_field_preamble import short_field_preamble
-from long_field_preamble import long_field_preamble
+from preamble_combiner import preamble_combiner
+
+
+
+
+
+
+
+
+
+
+
+
 from signal_field_preamble import signal_field_preamble
+from tagged_sequence_repeater import tagged_sequence_repeater
+from short_field_preamble import short_field_preamble
+from preamble_combiner import preamble_combiner
+
+
 
 
 

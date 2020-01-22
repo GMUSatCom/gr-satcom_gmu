@@ -1,15 +1,20 @@
 <?xml version="1.0"?>
 <block>
-  <name>Long Field Preamble</name>
-  <key>satcom_gmu_long_field_preamble</key>
+  <name>Tagged Sequence Repeater</name>
+  <key>satcom_gmu_tagged_sequence_repeater</key>
   <category>[satcom_gmu]</category>
   <import>import satcom_gmu</import>
-  <make>satcom_gmu.long_field_preamble()</make>
+  <make>satcom_gmu.tagged_sequence_repeater($sequence)</make>
   <!-- Make one 'param' node for every Parameter you want settable from the GUI.
        Sub-nodes:
        * name
        * key (makes the value accessible as $keyname, e.g. in the make node)
        * type -->
+  <param>
+    <name>Sequence</name>
+    <key>sequence</key>
+    <type>raw</type>
+  </param>
 
   <!-- Make one 'sink' node per input. Sub-nodes:
        * name (an identifier for the GUI)
@@ -25,6 +30,6 @@
        * optional (set to 1 for optional inputs) -->
   <source>
     <name>out</name>
-    <type>complex<!-- e.g. int, float, complex, byte, short, xxx_vector, ...--></type>
+    <type><!-- e.g. int, float, complex, byte, short, xxx_vector, ...--></type>
   </source>
 </block>

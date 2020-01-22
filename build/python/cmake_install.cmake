@@ -40,31 +40,31 @@ endif()
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/satcom_gmu" TYPE FILE FILES
     "/home/mattias/Desktop/gr-satcom_gmu/python/__init__.py"
-    "/home/mattias/Desktop/gr-satcom_gmu/python/short_field_preamble.py"
-    "/home/mattias/Desktop/gr-satcom_gmu/python/short_field_preamble.py"
-    "/home/mattias/Desktop/gr-satcom_gmu/python/long_field_preamble.py"
     "/home/mattias/Desktop/gr-satcom_gmu/python/utils.py"
     "/home/mattias/Desktop/gr-satcom_gmu/python/signal_field_preamble.py"
-    "/home/mattias/Desktop/gr-satcom_gmu/python/short_field_object.py"
+    "/home/mattias/Desktop/gr-satcom_gmu/python/tagged_sequence_repeater.py"
+    "/home/mattias/Desktop/gr-satcom_gmu/python/short_field_preamble.py"
+    "/home/mattias/Desktop/gr-satcom_gmu/python/short_field_preamble.py"
+    "/home/mattias/Desktop/gr-satcom_gmu/python/preamble_combiner.py"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/satcom_gmu" TYPE FILE FILES
     "/home/mattias/Desktop/gr-satcom_gmu/build/python/__init__.pyc"
-    "/home/mattias/Desktop/gr-satcom_gmu/build/python/short_field_preamble.pyc"
-    "/home/mattias/Desktop/gr-satcom_gmu/build/python/short_field_preamble.pyc"
-    "/home/mattias/Desktop/gr-satcom_gmu/build/python/long_field_preamble.pyc"
     "/home/mattias/Desktop/gr-satcom_gmu/build/python/utils.pyc"
     "/home/mattias/Desktop/gr-satcom_gmu/build/python/signal_field_preamble.pyc"
-    "/home/mattias/Desktop/gr-satcom_gmu/build/python/short_field_object.pyc"
+    "/home/mattias/Desktop/gr-satcom_gmu/build/python/tagged_sequence_repeater.pyc"
+    "/home/mattias/Desktop/gr-satcom_gmu/build/python/short_field_preamble.pyc"
+    "/home/mattias/Desktop/gr-satcom_gmu/build/python/short_field_preamble.pyc"
+    "/home/mattias/Desktop/gr-satcom_gmu/build/python/preamble_combiner.pyc"
     "/home/mattias/Desktop/gr-satcom_gmu/build/python/__init__.pyo"
-    "/home/mattias/Desktop/gr-satcom_gmu/build/python/short_field_preamble.pyo"
-    "/home/mattias/Desktop/gr-satcom_gmu/build/python/short_field_preamble.pyo"
-    "/home/mattias/Desktop/gr-satcom_gmu/build/python/long_field_preamble.pyo"
     "/home/mattias/Desktop/gr-satcom_gmu/build/python/utils.pyo"
     "/home/mattias/Desktop/gr-satcom_gmu/build/python/signal_field_preamble.pyo"
-    "/home/mattias/Desktop/gr-satcom_gmu/build/python/short_field_object.pyo"
+    "/home/mattias/Desktop/gr-satcom_gmu/build/python/tagged_sequence_repeater.pyo"
+    "/home/mattias/Desktop/gr-satcom_gmu/build/python/short_field_preamble.pyo"
+    "/home/mattias/Desktop/gr-satcom_gmu/build/python/short_field_preamble.pyo"
+    "/home/mattias/Desktop/gr-satcom_gmu/build/python/preamble_combiner.pyo"
     )
 endif()
 

@@ -39,10 +39,10 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gnuradio/grc/blocks" TYPE FILE FILES
-    "/home/mattias/Desktop/gr-satcom_gmu/grc/satcom_gmu_short_field_preamble.xml"
-    "/home/mattias/Desktop/gr-satcom_gmu/grc/satcom_gmu_long_field_preamble.xml"
     "/home/mattias/Desktop/gr-satcom_gmu/grc/satcom_gmu_signal_field_preamble.xml"
-    "/home/mattias/Desktop/gr-satcom_gmu/grc/satcom_gmu_short_field_object.xml"
+    "/home/mattias/Desktop/gr-satcom_gmu/grc/satcom_gmu_tagged_sequence_repeater.xml"
+    "/home/mattias/Desktop/gr-satcom_gmu/grc/satcom_gmu_short_field_preamble.xml"
+    "/home/mattias/Desktop/gr-satcom_gmu/grc/satcom_gmu_preamble_combiner.xml"
     )
 endif()
 

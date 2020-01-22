@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<block>
+  <name>preamble_combiner</name>
+  <key>satcom_gmu_preamble_combiner</key>
+  <category>[satcom_gmu]</category>
+  <import>import satcom_gmu</import>
+  <make>satcom_gmu.preamble_combiner()</make>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+
+
+  <!-- Make one 'sink' node per input. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <sink>
+    <name>Short Field</name>
+    <type>complex<!-- e.g. int, float, complex, byte, short, xxx_vector, ...--></type>
+    <vlen>64</vlen>
+  </sink>
+  <sink>
+    <name>Long Field</name>
+    <type>complex<!-- e.g. int, float, complex, byte, short, xxx_vector, ...--></type>
+    <vlen>64</vlen>
+  </sink>
+  <sink>
+    <name>Signal Field</name>
+    <type>complex<!-- e.g. int, float, complex, byte, short, xxx_vector, ...--></type>
+    <vlen>64</vlen>
+  </sink>
+  <!-- Make one 'source' node per output. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <source>
+    <name>out</name>
+    <type>complex<!-- e.g. int, float, complex, byte, short, xxx_vector, ...--></type>
+  </source>
+</block>

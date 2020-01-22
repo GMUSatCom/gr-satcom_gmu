@@ -17,8 +17,8 @@
 # the Free Software Foundation, Inc., 51 Franklin Street,
 # Boston, MA 02110-1301, USA.
 install(FILES
-    satcom_gmu_short_field_preamble.xml
-    satcom_gmu_long_field_preamble.xml
     satcom_gmu_signal_field_preamble.xml
-    DESTINATION share/gnuradio/grc/blocks
+    satcom_gmu_tagged_sequence_repeater.xml
+    satcom_gmu_short_field_preamble.xml
+    satcom_gmu_preamble_combiner.xml DESTINATION share/gnuradio/grc/blocks
 )

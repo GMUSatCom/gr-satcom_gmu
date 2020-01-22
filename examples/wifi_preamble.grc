@@ -30,7 +30,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(8, 8)</value>
+      <value>(8, 4)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -93,7 +93,217 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(8, 160)</value>
+      <value>(504, 4)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>fft_len</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>64</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_struct</key>
+    <param>
+      <key>value10</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value11</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value12</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value13</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value14</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value15</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value16</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value17</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value18</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value19</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value4</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value5</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value6</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value7</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value8</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value9</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>field0</key>
+      <value>sequence</value>
+    </param>
+    <param>
+      <key>field1</key>
+      <value>subcarriers</value>
+    </param>
+    <param>
+      <key>field10</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field11</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field12</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field13</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field14</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field15</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field16</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field17</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field18</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field19</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field2</key>
+      <value>cyclicPrefixLen</value>
+    </param>
+    <param>
+      <key>field3</key>
+      <value>periodicExtendTo</value>
+    </param>
+    <param>
+      <key>field4</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field5</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field6</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field7</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field8</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field9</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(888, 12)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>long_field_obj</value>
+    </param>
+    <param>
+      <key>value2</key>
+      <value>fft_len/4</value>
+    </param>
+    <param>
+      <key>value3</key>
+      <value>161</value>
+    </param>
+    <param>
+      <key>value0</key>
+      <value>np.array([1, 1,-1,-1,1,1,-1,1,-1,1,1,1,1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, -1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, -1, 1, 1, 1, 1],dtype=np.complex64)</value>
+    </param>
+    <param>
+      <key>value1</key>
+      <value>(range(-26,0) + range(1,27),)</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(192, 4)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -109,21 +319,77 @@
     </param>
   </block>
   <block>
-    <key>blocks_null_sink</key>
+    <key>variable_struct</key>
     <param>
-      <key>alias</key>
-      <value></value>
+      <key>value10</key>
+      <value>0</value>
     </param>
     <param>
-      <key>bus_conns</key>
-      <value>[[0,],]</value>
+      <key>value11</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value12</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value13</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value14</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value15</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value16</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value17</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value18</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value19</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value3</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value4</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value5</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value6</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value7</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value8</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value9</key>
+      <value>0</value>
     </param>
     <param>
       <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
       <value></value>
     </param>
     <param>
@@ -131,8 +397,88 @@
       <value>True</value>
     </param>
     <param>
+      <key>field0</key>
+      <value>sequence</value>
+    </param>
+    <param>
+      <key>field1</key>
+      <value>subcarriers</value>
+    </param>
+    <param>
+      <key>field10</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field11</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field12</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field13</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field14</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field15</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field16</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field17</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field18</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field19</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field2</key>
+      <value>periodicExtendTo</value>
+    </param>
+    <param>
+      <key>field3</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field4</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field5</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field6</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field7</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field8</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field9</key>
+      <value></value>
+    </param>
+    <param>
       <key>_coordinate</key>
-      <value>(304, 264)</value>
+      <value>(648, 4)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -140,30 +486,26 @@
     </param>
     <param>
       <key>id</key>
-      <value>blocks_null_sink_0</value>
+      <value>short_field_obj</value>
     </param>
     <param>
-      <key>type</key>
-      <value>complex</value>
+      <key>value2</key>
+      <value>161</value>
     </param>
     <param>
-      <key>num_inputs</key>
-      <value>1</value>
+      <key>value0</key>
+      <value>np.array([1,-1,1,-1,-1,1,-1,-1,1,1,1,1] ,dtype=np.complex64) * complex(1,1) * 1.472</value>
     </param>
     <param>
-      <key>vlen</key>
-      <value>1</value>
+      <key>value1</key>
+      <value>([-24,-20,-16,-12,-8,-4,4,8,12,16,20,24],)</value>
     </param>
   </block>
   <block>
-    <key>blocks_null_source</key>
+    <key>digital_chunks_to_symbols_xx</key>
     <param>
       <key>alias</key>
       <value></value>
-    </param>
-    <param>
-      <key>bus_conns</key>
-      <value>[[0,],]</value>
     </param>
     <param>
       <key>comment</key>
@@ -174,12 +516,16 @@
       <value></value>
     </param>
     <param>
+      <key>dimension</key>
+      <value>1</value>
+    </param>
+    <param>
       <key>_enabled</key>
       <value>True</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(912, 248)</value>
+      <value>(328, 452)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -187,7 +533,11 @@
     </param>
     <param>
       <key>id</key>
-      <value>blocks_null_source_0</value>
+      <value>digital_chunks_to_symbols_xx_0_0</value>
+    </param>
+    <param>
+      <key>in_type</key>
+      <value>byte</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -198,16 +548,425 @@
       <value>0</value>
     </param>
     <param>
-      <key>num_outputs</key>
+      <key>num_ports</key>
       <value>1</value>
+    </param>
+    <param>
+      <key>out_type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>symbol_table</key>
+      <value>(complex(-1,0),complex(1,0))</value>
+    </param>
+  </block>
+  <block>
+    <key>digital_ofdm_carrier_allocator_cvc</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>fft_len</key>
+      <value>fft_len</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(616, 276)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>digital_ofdm_carrier_allocator_cvc_0_0</value>
+    </param>
+    <param>
+      <key>len_tag_key</key>
+      <value>"packet_len"</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>occupied_carriers</key>
+      <value>long_field_obj.subcarriers</value>
+    </param>
+    <param>
+      <key>pilot_carriers</key>
+      <value>((),)</value>
+    </param>
+    <param>
+      <key>pilot_symbols</key>
+      <value>((),)</value>
+    </param>
+    <param>
+      <key>sync_words</key>
+      <value>()</value>
+    </param>
+  </block>
+  <block>
+    <key>digital_ofdm_carrier_allocator_cvc</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>fft_len</key>
+      <value>fft_len</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(616, 148)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>digital_ofdm_carrier_allocator_cvc_0_0_0</value>
+    </param>
+    <param>
+      <key>len_tag_key</key>
+      <value>"packet_len"</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>occupied_carriers</key>
+      <value>short_field_obj.subcarriers</value>
+    </param>
+    <param>
+      <key>pilot_carriers</key>
+      <value>((),)</value>
+    </param>
+    <param>
+      <key>pilot_symbols</key>
+      <value>((),)</value>
+    </param>
+    <param>
+      <key>sync_words</key>
+      <value>()</value>
+    </param>
+  </block>
+  <block>
+    <key>digital_ofdm_carrier_allocator_cvc</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>fft_len</key>
+      <value>fft_len</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(616, 404)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>digital_ofdm_carrier_allocator_cvc_1_0</value>
+    </param>
+    <param>
+      <key>len_tag_key</key>
+      <value>"packet_len"</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>occupied_carriers</key>
+      <value>(range(-26, -21) + range(-20, -7) + range(-6, 0) + range(1, 7) + range(8, 21) + range(22, 27),)</value>
+    </param>
+    <param>
+      <key>pilot_carriers</key>
+      <value>((-21, -7, 7, 21,),)</value>
+    </param>
+    <param>
+      <key>pilot_symbols</key>
+      <value>((1, 1, 1, -1), (1, 1, 1, -1), (1, 1, 1, -1), (1, 1, 1, -1), (-1, -1, -1, 1), (-1, -1, -1, 1), (-1, -1, -1, 1), (1, 1, 1, -1), (-1, -1, -1, 1), (-1, -1, -1, 1), (-1, -1, -1, 1), (-1, -1, -1, 1), (1, 1, 1, -1), (1, 1, 1, -1), (-1, -1, -1, 1), (1, 1, 1, -1), (-1, -1, -1, 1), (-1, -1, -1, 1), (1, 1, 1, -1), (1, 1, 1, -1), (-1, -1, -1, 1), (1, 1, 1, -1), (1, 1, 1, -1), (-1, -1, -1, 1), (1, 1, 1, -1), (1, 1, 1, -1), (1, 1, 1, -1), (1, 1, 1, -1), (1, 1, 1, -1), (1, 1, 1, -1), (-1, -1, -1, 1), (1, 1, 1, -1), (1, 1, 1, -1), (1, 1, 1, -1), (-1, -1, -1, 1), (1, 1, 1, -1), (1, 1, 1, -1), (-1, -1, -1, 1), (-1, -1, -1, 1), (1, 1, 1, -1), (1, 1, 1, -1), (1, 1, 1, -1), (-1, -1, -1, 1), (1, 1, 1, -1), (-1, -1, -1, 1), (-1, -1, -1, 1), (-1, -1, -1, 1), (1, 1, 1, -1), (-1, -1, -1, 1), (1, 1, 1, -1), (-1, -1, -1, 1), (-1, -1, -1, 1), (1, 1, 1, -1), (-1, -1, -1, 1), (-1, -1, -1, 1), (1, 1, 1, -1), (1, 1, 1, -1), (1, 1, 1, -1), (1, 1, 1, -1), (1, 1, 1, -1), (-1, -1, -1, 1), (-1, -1, -1, 1), (1, 1, 1, -1), (1, 1, 1, -1), (-1, -1, -1, 1), (-1, -1, -1, 1), (1, 1, 1, -1), (-1, -1, -1, 1), (1, 1, 1, -1), (-1, -1, -1, 1), (1, 1, 1, -1), (1, 1, 1, -1), (-1, -1, -1, 1), (-1, -1, -1, 1), (-1, -1, -1, 1), (1, 1, 1, -1), (1, 1, 1, -1), (-1, -1, -1, 1), (-1, -1, -1, 1), (-1, -1, -1, 1), (-1, -1, -1, 1), (1, 1, 1, -1), (-1, -1, -1, 1), (-1, -1, -1, 1), (1, 1, 1, -1), (-1, -1, -1, 1), (1, 1, 1, -1), (1, 1, 1, -1), (1, 1, 1, -1), (1, 1, 1, -1), (-1, -1, -1, 1), (1, 1, 1, -1), (-1, -1, -1, 1), (1, 1, 1, -1), (-1, -1, -1, 1), (1, 1, 1, -1), (-1, -1, -1, 1), (-1, -1, -1, 1), (-1, -1, -1, 1), (-1, -1, -1, 1), (-1, -1, -1, 1), (1, 1, 1, -1), (-1, -1, -1, 1), (1, 1, 1, -1), (1, 1, 1, -1), (-1, -1, -1, 1), (1, 1, 1, -1), (-1, -1, -1, 1), (1, 1, 1, -1), (1, 1, 1, -1), (1, 1, 1, -1), (-1, -1, -1, 1), (-1, -1, -1, 1), (1, 1, 1, -1), (-1, -1, -1, 1), (-1, -1, -1, 1), (-1, -1, -1, 1), (1, 1, 1, -1), (1, 1, 1, -1), (1, 1, 1, -1), (-1, -1, -1, 1), (-1, -1, -1, 1), (-1, -1, -1, 1), (-1, -1, -1, 1), (-1, -1, -1, 1), (-1, -1, -1, 1), (-1, -1, -1, 1))</value>
+    </param>
+    <param>
+      <key>sync_words</key>
+      <value>()</value>
+    </param>
+  </block>
+  <block>
+    <key>fft_vxx</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>fft_size</key>
+      <value>fft_len</value>
+    </param>
+    <param>
+      <key>forward</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(840, 284)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>fft_vxx_0_0</value>
     </param>
     <param>
       <key>type</key>
       <value>complex</value>
     </param>
     <param>
-      <key>vlen</key>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>nthreads</key>
       <value>1</value>
+    </param>
+    <param>
+      <key>shift</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>window</key>
+      <value>tuple([1.0/64.0]*fft_len)</value>
+    </param>
+  </block>
+  <block>
+    <key>fft_vxx</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>fft_size</key>
+      <value>fft_len</value>
+    </param>
+    <param>
+      <key>forward</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(840, 156)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>fft_vxx_0_0_0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>nthreads</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>shift</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>window</key>
+      <value>tuple([1.0/64.0]*fft_len)</value>
+    </param>
+  </block>
+  <block>
+    <key>fft_vxx</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>fft_size</key>
+      <value>fft_len</value>
+    </param>
+    <param>
+      <key>forward</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(832, 412)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>fft_vxx_0_1</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>nthreads</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>shift</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>window</key>
+      <value>tuple([1.0/64.0] * 64)</value>
+    </param>
+  </block>
+  <block>
+    <key>import</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(352, 20)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>import_0</value>
+    </param>
+    <param>
+      <key>import</key>
+      <value>import numpy as np</value>
     </param>
   </block>
   <block>
@@ -222,7 +981,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1088, 228)</value>
+      <value>(1136, 132)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -234,7 +993,7 @@
     </param>
     <param>
       <key>type</key>
-      <value></value>
+      <value>complex</value>
     </param>
     <param>
       <key>label</key>
@@ -265,7 +1024,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(88, 244)</value>
+      <value>(0, 348)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -273,7 +1032,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>pad_source_0</value>
+      <value>pad_source_1</value>
     </param>
     <param>
       <key>label</key>
@@ -289,7 +1048,7 @@
     </param>
     <param>
       <key>type</key>
-      <value></value>
+      <value>message</value>
     </param>
     <param>
       <key>vlen</key>
@@ -297,7 +1056,7 @@
     </param>
   </block>
   <block>
-    <key>parameter</key>
+    <key>satcom_gmu_preamble_combiner</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -307,12 +1066,16 @@
       <value></value>
     </param>
     <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
       <key>_enabled</key>
       <value>True</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(264, 12)</value>
+      <value>(1048, 288)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -320,34 +1083,211 @@
     </param>
     <param>
       <key>id</key>
-      <value>parameter_0</value>
+      <value>satcom_gmu_preamble_combiner_0</value>
     </param>
     <param>
-      <key>label</key>
-      <value>Test</value>
+      <key>maxoutbuf</key>
+      <value>0</value>
     </param>
     <param>
-      <key>short_id</key>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>satcom_gmu_signal_field_preamble</key>
+    <param>
+      <key>alias</key>
       <value></value>
     </param>
     <param>
-      <key>type</key>
-      <value>intx</value>
+      <key>comment</key>
+      <value></value>
     </param>
     <param>
-      <key>value</key>
-      <value>1</value>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(304, 392)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>satcom_gmu_signal_field_preamble_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>satcom_gmu_tagged_sequence_repeater</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(288, 316)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>satcom_gmu_tagged_sequence_repeater_0_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>sequence</key>
+      <value>long_field_obj.sequence</value>
+    </param>
+  </block>
+  <block>
+    <key>satcom_gmu_tagged_sequence_repeater</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(288, 188)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>satcom_gmu_tagged_sequence_repeater_0_0_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>sequence</key>
+      <value>short_field_obj.sequence</value>
     </param>
   </block>
   <connection>
-    <source_block_id>blocks_null_source_0</source_block_id>
+    <source_block_id>digital_chunks_to_symbols_xx_0_0</source_block_id>
+    <sink_block_id>digital_ofdm_carrier_allocator_cvc_1_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>digital_ofdm_carrier_allocator_cvc_0_0</source_block_id>
+    <sink_block_id>fft_vxx_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>digital_ofdm_carrier_allocator_cvc_0_0_0</source_block_id>
+    <sink_block_id>fft_vxx_0_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>digital_ofdm_carrier_allocator_cvc_1_0</source_block_id>
+    <sink_block_id>fft_vxx_0_1</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>fft_vxx_0_0</source_block_id>
+    <sink_block_id>satcom_gmu_preamble_combiner_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>1</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>fft_vxx_0_0_0</source_block_id>
+    <sink_block_id>satcom_gmu_preamble_combiner_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>fft_vxx_0_1</source_block_id>
+    <sink_block_id>satcom_gmu_preamble_combiner_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>2</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>pad_source_1</source_block_id>
+    <sink_block_id>satcom_gmu_signal_field_preamble_0</sink_block_id>
+    <source_key>out</source_key>
+    <sink_key>MPDU</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>satcom_gmu_preamble_combiner_0</source_block_id>
     <sink_block_id>pad_sink_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>pad_source_0</source_block_id>
-    <sink_block_id>blocks_null_sink_0</sink_block_id>
+    <source_block_id>satcom_gmu_signal_field_preamble_0</source_block_id>
+    <sink_block_id>digital_chunks_to_symbols_xx_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>satcom_gmu_tagged_sequence_repeater_0_0</source_block_id>
+    <sink_block_id>digital_ofdm_carrier_allocator_cvc_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>satcom_gmu_tagged_sequence_repeater_0_0_0</source_block_id>
+    <sink_block_id>digital_ofdm_carrier_allocator_cvc_0_0_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
