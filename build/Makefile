@@ -181,17 +181,17 @@ uninstall/fast:
 .PHONY : uninstall/fast
 
 #=============================================================================
-# Target rules for targets named pygen_python_8293e
+# Target rules for targets named pygen_python_ecc51
 
 # Build rule for target.
-pygen_python_8293e: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pygen_python_8293e
-.PHONY : pygen_python_8293e
+pygen_python_ecc51: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pygen_python_ecc51
+.PHONY : pygen_python_ecc51
 
 # fast build rule for target.
-pygen_python_8293e/fast:
-	$(MAKE) -f python/CMakeFiles/pygen_python_8293e.dir/build.make python/CMakeFiles/pygen_python_8293e.dir/build
-.PHONY : pygen_python_8293e/fast
+pygen_python_ecc51/fast:
+	$(MAKE) -f python/CMakeFiles/pygen_python_ecc51.dir/build.make python/CMakeFiles/pygen_python_ecc51.dir/build
+.PHONY : pygen_python_ecc51/fast
 
 #=============================================================================
 # Target rules for targets named pygen_apps_9a6dd
@@ -233,7 +233,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... install"
-	@echo "... pygen_python_8293e"
+	@echo "... pygen_python_ecc51"
 	@echo "... pygen_apps_9a6dd"
 	@echo "... doxygen_target"
 .PHONY : help

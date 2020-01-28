@@ -37,6 +37,10 @@ from signal_field_preamble import signal_field_preamble
 from tagged_sequence_repeater import tagged_sequence_repeater
 from short_field_preamble import short_field_preamble
 from preamble_combiner import preamble_combiner
+from wifi_scrambler import wifi_scrambler
+from data_formatter import data_formatter
+from data_formatter import data_formatter
+
 
 
 
@@ -53,6 +57,10 @@ from signal_field_preamble import signal_field_preamble
 from tagged_sequence_repeater import tagged_sequence_repeater
 from short_field_preamble import short_field_preamble
 from preamble_combiner import preamble_combiner
+from wifi_scrambler import wifi_scrambler
+from data_formatter import data_formatter
+from data_formatter import data_formatter
+
 
 
 

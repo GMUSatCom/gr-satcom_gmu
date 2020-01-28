@@ -20,5 +20,8 @@ install(FILES
     satcom_gmu_signal_field_preamble.xml
     satcom_gmu_tagged_sequence_repeater.xml
     satcom_gmu_short_field_preamble.xml
-    satcom_gmu_preamble_combiner.xml DESTINATION share/gnuradio/grc/blocks
+    satcom_gmu_preamble_combiner.xml
+    satcom_gmu_wifi_scrambler.xml
+    satcom_gmu_data_formatter.xml
+    satcom_gmu_data_formatter.xml DESTINATION share/gnuradio/grc/blocks
 )

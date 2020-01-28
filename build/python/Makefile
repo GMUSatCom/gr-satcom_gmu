@@ -101,17 +101,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -122,6 +111,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # Special rule for the target install
 install: preinstall
@@ -168,19 +168,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-python/CMakeFiles/pygen_python_8293e.dir/rule:
-	cd /home/mattias/Desktop/gr-satcom_gmu/build && $(MAKE) -f CMakeFiles/Makefile2 python/CMakeFiles/pygen_python_8293e.dir/rule
-.PHONY : python/CMakeFiles/pygen_python_8293e.dir/rule
+python/CMakeFiles/pygen_python_ecc51.dir/rule:
+	cd /home/mattias/Desktop/gr-satcom_gmu/build && $(MAKE) -f CMakeFiles/Makefile2 python/CMakeFiles/pygen_python_ecc51.dir/rule
+.PHONY : python/CMakeFiles/pygen_python_ecc51.dir/rule
 
 # Convenience name for target.
-pygen_python_8293e: python/CMakeFiles/pygen_python_8293e.dir/rule
+pygen_python_ecc51: python/CMakeFiles/pygen_python_ecc51.dir/rule
 
-.PHONY : pygen_python_8293e
+.PHONY : pygen_python_ecc51
 
 # fast build rule for target.
-pygen_python_8293e/fast:
-	cd /home/mattias/Desktop/gr-satcom_gmu/build && $(MAKE) -f python/CMakeFiles/pygen_python_8293e.dir/build.make python/CMakeFiles/pygen_python_8293e.dir/build
-.PHONY : pygen_python_8293e/fast
+pygen_python_ecc51/fast:
+	cd /home/mattias/Desktop/gr-satcom_gmu/build && $(MAKE) -f python/CMakeFiles/pygen_python_ecc51.dir/build.make python/CMakeFiles/pygen_python_ecc51.dir/build
+.PHONY : pygen_python_ecc51/fast
 
 # Help Target
 help:
@@ -192,9 +192,9 @@ help:
 	@echo "... install/local"
 	@echo "... test"
 	@echo "... list_install_components"
-	@echo "... pygen_python_8293e"
-	@echo "... edit_cache"
+	@echo "... pygen_python_ecc51"
 	@echo "... rebuild_cache"
+	@echo "... edit_cache"
 	@echo "... install"
 .PHONY : help
 

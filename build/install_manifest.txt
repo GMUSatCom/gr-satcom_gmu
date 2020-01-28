@@ -7,6 +7,9 @@
 /usr/local/lib/python2.7/dist-packages/satcom_gmu/short_field_preamble.py
 /usr/local/lib/python2.7/dist-packages/satcom_gmu/short_field_preamble.py
 /usr/local/lib/python2.7/dist-packages/satcom_gmu/preamble_combiner.py
+/usr/local/lib/python2.7/dist-packages/satcom_gmu/wifi_scrambler.py
+/usr/local/lib/python2.7/dist-packages/satcom_gmu/data_formatter.py
+/usr/local/lib/python2.7/dist-packages/satcom_gmu/data_formatter.py
 /usr/local/lib/python2.7/dist-packages/satcom_gmu/__init__.pyc
 /usr/local/lib/python2.7/dist-packages/satcom_gmu/utils.pyc
 /usr/local/lib/python2.7/dist-packages/satcom_gmu/signal_field_preamble.pyc
@@ -14,6 +17,9 @@
 /usr/local/lib/python2.7/dist-packages/satcom_gmu/short_field_preamble.pyc
 /usr/local/lib/python2.7/dist-packages/satcom_gmu/short_field_preamble.pyc
 /usr/local/lib/python2.7/dist-packages/satcom_gmu/preamble_combiner.pyc
+/usr/local/lib/python2.7/dist-packages/satcom_gmu/wifi_scrambler.pyc
+/usr/local/lib/python2.7/dist-packages/satcom_gmu/data_formatter.pyc
+/usr/local/lib/python2.7/dist-packages/satcom_gmu/data_formatter.pyc
 /usr/local/lib/python2.7/dist-packages/satcom_gmu/__init__.pyo
 /usr/local/lib/python2.7/dist-packages/satcom_gmu/utils.pyo
 /usr/local/lib/python2.7/dist-packages/satcom_gmu/signal_field_preamble.pyo
@@ -21,10 +27,16 @@
 /usr/local/lib/python2.7/dist-packages/satcom_gmu/short_field_preamble.pyo
 /usr/local/lib/python2.7/dist-packages/satcom_gmu/short_field_preamble.pyo
 /usr/local/lib/python2.7/dist-packages/satcom_gmu/preamble_combiner.pyo
+/usr/local/lib/python2.7/dist-packages/satcom_gmu/wifi_scrambler.pyo
+/usr/local/lib/python2.7/dist-packages/satcom_gmu/data_formatter.pyo
+/usr/local/lib/python2.7/dist-packages/satcom_gmu/data_formatter.pyo
 /usr/local/share/gnuradio/grc/blocks/satcom_gmu_signal_field_preamble.xml
 /usr/local/share/gnuradio/grc/blocks/satcom_gmu_tagged_sequence_repeater.xml
 /usr/local/share/gnuradio/grc/blocks/satcom_gmu_short_field_preamble.xml
 /usr/local/share/gnuradio/grc/blocks/satcom_gmu_preamble_combiner.xml
+/usr/local/share/gnuradio/grc/blocks/satcom_gmu_wifi_scrambler.xml
+/usr/local/share/gnuradio/grc/blocks/satcom_gmu_data_formatter.xml
+/usr/local/share/gnuradio/grc/blocks/satcom_gmu_data_formatter.xml
 /usr/local/share/doc/gr-satcom_gmu/xml/index.xml
 /usr/local/share/doc/gr-satcom_gmu/xml/indexpage.xml
 /usr/local/share/doc/gr-satcom_gmu/xml/dir_b0a05fb685cd31c0047390f9788579c3.xml

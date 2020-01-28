@@ -2,6 +2,24 @@
 import numpy as np
 from bitarray import bitarray
 
+class OFDM_Params:
+    def __init__(self):
+        # Rate code used in signal Field
+        self.rate_code = '1101'
+        #Channel Spacing
+        self.bw = 20
+        # the data rate which depends on the channel bandwidth
+        self.data_rate = 6
+        # the number of coded bits per subcarrier
+        self.n_cbpsc = 1
+        # number of coded bits per OFDM symbol
+        self.n_cbps = 48
+        # number of data bits per OFDM symbol
+        # BPSK = 1, QPSK = 2, etc
+        self.n_dbps = 24
+        # This is the coding rate. and represents. a fractrion of data bits over coded bits
+        self.r = 1.0/2.0
+
 class ShortField:
     def __init__(self):
         self.sequence = np.array([1,-1,1,-1,-1,1,-1,-1,1,1,1,1] ,dtype=np.complex64) * complex(1,1) * 1.472
@@ -144,11 +162,19 @@ def interleaver(input,reverse,ncbps,nbpsc):
     return out
 
 
+def scrambler(inpt,state):
+    state = bitarray(state)
+    output = bitarray('')
+    inpt = bitarray(inpt)
+    for i in inpt:
+        feedback = state[6] ^ state[3]
+        output.append(i ^ feedback)
+        state.insert(0,feedback)
+        state.pop()
+
+
+    return output
+
 if __name__ == "__main__":
-    input = bitarray('101100010011000000000000')
-    assert(len(input) == 24)
-    c = convolutional_encoder(input)
-    assert(len(c) == 48)
-    i = interleaver(c,False,48,2)
-    print(bytearray(i.tobytes())[1])
-    assert(i == bitarray('100101001101000000010100100000110010010010010100'))
+    a = scrambler('0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000','1111111')
+    print(a)

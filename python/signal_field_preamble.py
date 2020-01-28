@@ -40,10 +40,8 @@ class signal_field_preamble(gr.sync_block):
         self.set_msg_handler(pmt.intern('MPDU'),self.incoming_MPDU)
 
     def incoming_MPDU(self,mpdu):
-        # get the length of the MPDU
-        # set a attribute so next time work is called you produce a Signal Field
-        if pmt.is_u32vector(mpdu):
-            l = len(pmt.u32vector_elements(mpdu))
+        if pmt.is_u8vector(mpdu):
+            l = len(pmt.u8vector_elements(mpdu))
             s = SignalField(20,36,l)
             s = self.prepare_signal(s.encode())
             self.outputs.extend(s)

@@ -43,6 +43,9 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/home/mattias/Desktop/gr-satcom_gmu/grc/satcom_gmu_tagged_sequence_repeater.xml"
     "/home/mattias/Desktop/gr-satcom_gmu/grc/satcom_gmu_short_field_preamble.xml"
     "/home/mattias/Desktop/gr-satcom_gmu/grc/satcom_gmu_preamble_combiner.xml"
+    "/home/mattias/Desktop/gr-satcom_gmu/grc/satcom_gmu_wifi_scrambler.xml"
+    "/home/mattias/Desktop/gr-satcom_gmu/grc/satcom_gmu_data_formatter.xml"
+    "/home/mattias/Desktop/gr-satcom_gmu/grc/satcom_gmu_data_formatter.xml"
     )
 endif()
 

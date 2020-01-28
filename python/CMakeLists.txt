@@ -36,7 +36,10 @@ GR_PYTHON_INSTALL(
     tagged_sequence_repeater.py
     short_field_preamble.py
     short_field_preamble.py
-    preamble_combiner.py DESTINATION ${GR_PYTHON_DIR}/satcom_gmu
+    preamble_combiner.py
+    wifi_scrambler.py
+    data_formatter.py
+    data_formatter.py DESTINATION ${GR_PYTHON_DIR}/satcom_gmu
 )
 
 ########################################################################
@@ -47,3 +50,4 @@ include(GrTest)
 set(GR_TEST_TARGET_DEPS gnuradio-satcom_gmu)
 set(GR_TEST_PYTHON_DIRS ${CMAKE_BINARY_DIR}/swig)
 GR_ADD_TEST(qa_signal_field_preamble ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_signal_field_preamble.py)
+GR_ADD_TEST(qa_wifi_scrambler ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_wifi_scrambler.py)
