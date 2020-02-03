@@ -20,7 +20,7 @@
 # 
 
 from gnuradio import gr, gr_unittest
-from gnuradio import blocks,digital
+from gnuradio import blocks,digital,fec
 from signal_field_preamble import signal_field_preamble
 import pmt
 
@@ -34,10 +34,7 @@ class qa_signal_field_preamble (gr_unittest.TestCase):
 
     def test_001_t (self):
         # set up fg
-        msg_strobe = blocks.message_strobe(pmt.make_u32vector(5,0), 5000)
-        s = signal_field_preamble()
-        chunk = digital.chunks_to_symbols_($symbol_table, $dimension)
-        print()
+        print(fec.cc_encoder(24,7,.5,[1,1,1,1,1,1,1]))
         self.tb.run ()
         # check data
 

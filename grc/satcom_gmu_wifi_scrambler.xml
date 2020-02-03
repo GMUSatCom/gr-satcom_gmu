@@ -13,7 +13,7 @@
   <param>
     <name>Seed</name>
     <key>seed</key>
-    <type>byte</type>
+    <type>string</type>
   </param>
 
   <!-- Make one 'sink' node per input. Sub-nodes:

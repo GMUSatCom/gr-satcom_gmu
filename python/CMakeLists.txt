@@ -39,7 +39,10 @@ GR_PYTHON_INSTALL(
     preamble_combiner.py
     wifi_scrambler.py
     data_formatter.py
-    data_formatter.py DESTINATION ${GR_PYTHON_DIR}/satcom_gmu
+    data_formatter.py
+    wifi_interleaver.py
+    conv_coder.py
+    debug_sink.py DESTINATION ${GR_PYTHON_DIR}/satcom_gmu
 )
 
 ########################################################################

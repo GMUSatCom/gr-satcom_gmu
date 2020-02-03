@@ -59,7 +59,6 @@ GR_SWIG_INSTALL(TARGETS satcom_gmu_swig DESTINATION ${GR_PYTHON_DIR}/satcom_gmu)
 ########################################################################
 install(
     FILES
-    satcom_gmu_swig.i
     ${CMAKE_CURRENT_BINARY_DIR}/satcom_gmu_swig_doc.i
     DESTINATION ${GR_INCLUDE_DIR}/satcom_gmu/swig
 )

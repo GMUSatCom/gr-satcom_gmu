@@ -23,5 +23,7 @@ install(FILES
     satcom_gmu_preamble_combiner.xml
     satcom_gmu_wifi_scrambler.xml
     satcom_gmu_data_formatter.xml
-    satcom_gmu_data_formatter.xml DESTINATION share/gnuradio/grc/blocks
+    satcom_gmu_wifi_interleaver.xml
+    satcom_gmu_conv_coder.xml
+    satcom_gmu_debug_sink.xml DESTINATION share/gnuradio/grc/blocks
 )

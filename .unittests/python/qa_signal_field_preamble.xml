@@ -1,0 +1,14 @@
+<testsuite errors="1" failures="0" name="unittest.suite.TestSuite" tests="1" time="0.001">
+  <testcase classname="__main__.qa_signal_field_preamble" name="test_001_t" time="0.0009">
+    <error type="exceptions.AttributeError">No constructor defined - class is abstract
+  File "/usr/lib/python2.7/unittest/case.py", line 329, in run
+    testMethod()
+  File "/home/mattias/Desktop/gr-satcom_gmu/python/qa_signal_field_preamble.py", line 37, in test_001_t
+    print(fec.cc_encoder(24,7,.5,[1,1,1,1,1,1,1]))
+  File "/usr/lib/python2.7/dist-packages/gnuradio/fec/fec_swig.py", line 1485, in __init__
+    raise AttributeError("No constructor defined - class is abstract")
+    </error>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

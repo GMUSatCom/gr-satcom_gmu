@@ -1,6 +1,18 @@
 
 import numpy as np
 from bitarray import bitarray
+import pmt
+import ctypes
+# TODO
+# 1. convert bitarray to using numpy.unpackbits()
+
+def indx_gen(max_val):
+    n = -1
+    while True:
+        n += 1
+        if n == max_val:
+            n = 0
+        yield n
 
 class OFDM_Params:
     def __init__(self):
@@ -19,6 +31,14 @@ class OFDM_Params:
         self.n_dbps = 24
         # This is the coding rate. and represents. a fractrion of data bits over coded bits
         self.r = 1.0/2.0
+    def vec_test(self):
+        test_bytes = '\x04\x02\x00\x2E\x00\x60\x08\xCD\x37\xA6\x00\x20\xD6\x01\x3C\xF1\x00\x60\x08\xAD\x3B\xAF\x00\x00' + 'Joy, bright spark of divinity, Daughter of Elysium, Fire-insired we trea' + '\x67\x33\x21\xb6'
+        print(len(test_bytes))
+        vec = np.fromstring(test_bytes,dtype=np.uint8)
+        pmt_vec = pmt.make_u8vector(len(vec),0)
+        for i,val in enumerate(vec):
+            pmt.u8vector_set(pmt_vec,i,int(val))
+        return pmt_vec
 
 class ShortField:
     def __init__(self):
@@ -174,7 +194,40 @@ def scrambler(inpt,state):
 
 
     return output
+class conv_coder():
+    def __init__(self):
+        self.state = np.zeros(7,dtype=np.uint8)
+
+    def code_bit(self,bit):
+        assert(bit == 1 or bit == 0)
+        assert(type(bit) == type(np.uint8(1)))
+        gen1 = np.array([1,0,1,1,0,1,1],dtype=np.uint8)
+        gen2 = np.array([1,1,1,1,0,0,1],dtype=np.uint8)
+        self.state = np.roll(self.state,1)
+        self.state[0] = bit 
+        print(self.state)
+        bit1 = parity(self.state & gen1)
+        bit2 = parity(self.state & gen2)
+
+        return np.array([bit1,bit2],dtype=np.uint8)
+        
 
 if __name__ == "__main__":
-    a = scrambler('0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000','1111111')
-    print(a)
+    ncbps = 192
+    nbpsc =  4
+    # assert(len(input) % ncbps == 0)
+    first = np.zeros(ncbps)
+    second = np.zeros(ncbps)
+
+    out = "idk"
+    s = max([1,nbpsc/2])
+    
+    for j in range(0,ncbps):
+        print(j+ (16*j)/ncbps)
+        first[j] = s * (j/s) + (j + (16*j)/ncbps) % s
+    # print(first)
+    
+    for i in range(0,ncbps):
+        second[i] = 16 * i - (ncbps -1) * ((16*i)/ncbps)
+    print(max(second))
+    pass

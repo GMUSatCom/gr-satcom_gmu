@@ -24,9 +24,8 @@ include(GrPlatform) #define LIB_SUFFIX
 
 include_directories(${Boost_INCLUDE_DIR})
 link_directories(${Boost_LIBRARY_DIRS})
-
 list(APPEND satcom_gmu_sources
-)
+    )
 
 set(satcom_gmu_sources "${satcom_gmu_sources}" PARENT_SCOPE)
 if(NOT satcom_gmu_sources)
