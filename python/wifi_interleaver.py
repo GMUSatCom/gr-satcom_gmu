@@ -32,6 +32,8 @@ class wifi_interleaver(gr.decim_block):
         self.ncbps = ncbps
         self.nbpsc = nbpsc
         self.gen_permutations(ncbps, nbpsc)
+        # print(self.first)
+        # print(self.second)
         gr.decim_block.__init__(self,
             name="wifi_interleaver",
             in_sig=[np.uint8],
@@ -45,16 +47,17 @@ class wifi_interleaver(gr.decim_block):
 
     def gen_permutations(self,ncbps,nbpsc): 
         s = max([1,nbpsc/2])
-        for j in range(0,ncbps):
-            self.first[j] = s * (j/s) + (j + (16*j)/ncbps) % s
-
+        for k in range(0,ncbps):
+            # self.first[j] = s * (j/s) + (j + (16*j)/ncbps) % s
+            self.first[k] = (ncbps/16) * (k % 16) + k/16
         for i in range(0,ncbps):
-            self.second[i] = 16 * i - (ncbps -1) * ((16*i)/ncbps)
+            # self.second[i] = 16 * i - (ncbps -1) * ((16*i)/ncbps)
+            self.second[i] = s*(i/s) + (i + ncbps - (16*i)/ncbps) % s
 
     def work(self, input_items, output_items):
         in0 = input_items[0]
         out = output_items[0]
-        # print("=========OUTPUT=========")
+        # print("=========DEBUG OUTPUT=========")
         # print("in0 len: {}, out len: {}".format(len(in0),len(out)))
         
         tags = self.get_tags_in_window(0,0,len(in0),pmt.intern("packet_len"))
@@ -71,11 +74,13 @@ class wifi_interleaver(gr.decim_block):
         for i in range(0,symbols):
             out_vec = np.zeros(self.ncbps,dtype=np.uint8)
             for k in range(0,self.ncbps):
+                permutation_index = self.second[self.first[k]]
                 if reverse:
-                    out_vec[self.second[self.first[k]]] = in0[k]
+                    out_vec[k] = in0[self.ncbps * i + permutation_index]
                 else:
                     # print("out i: {}, in0 i: {},".format(i * self.ncbps + k,i * self.ncbps + self.second[self.first[k]]))
-                    out_vec[k] = in0[int(self.second[self.first[k]])]
+                    # out_vec[k] = in0[(self.second[self.first[k]])]
+                    out_vec[permutation_index] = in0[self.ncbps* i + k]
             out[i] = out_vec
              
         return len(out)
