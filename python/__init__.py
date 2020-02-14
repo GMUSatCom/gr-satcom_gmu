@@ -42,10 +42,12 @@ from data_formatter import data_formatter
 from wifi_interleaver import wifi_interleaver
 from conv_coder import conv_coder
 from debug_sink import debug_sink
+from OFDM_params import OFDM_params
 from data_formatter import data_formatter
 from wifi_interleaver import wifi_interleaver
 from conv_coder import conv_coder
 from debug_sink import debug_sink
+from OFDM_params import OFDM_params
 
 
 
@@ -68,10 +70,12 @@ from data_formatter import data_formatter
 from wifi_interleaver import wifi_interleaver
 from conv_coder import conv_coder
 from debug_sink import debug_sink
+from OFDM_params import OFDM_params
 from data_formatter import data_formatter
 from wifi_interleaver import wifi_interleaver
 from conv_coder import conv_coder
 from debug_sink import debug_sink
+from OFDM_params import OFDM_params
 
 
 

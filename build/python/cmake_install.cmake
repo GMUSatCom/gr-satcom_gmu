@@ -52,6 +52,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/home/mattias/Desktop/gr-satcom_gmu/python/wifi_interleaver.py"
     "/home/mattias/Desktop/gr-satcom_gmu/python/conv_coder.py"
     "/home/mattias/Desktop/gr-satcom_gmu/python/debug_sink.py"
+    "/home/mattias/Desktop/gr-satcom_gmu/python/OFDM_params.py"
     )
 endif()
 
@@ -70,6 +71,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/home/mattias/Desktop/gr-satcom_gmu/build/python/wifi_interleaver.pyc"
     "/home/mattias/Desktop/gr-satcom_gmu/build/python/conv_coder.pyc"
     "/home/mattias/Desktop/gr-satcom_gmu/build/python/debug_sink.pyc"
+    "/home/mattias/Desktop/gr-satcom_gmu/build/python/OFDM_params.pyc"
     "/home/mattias/Desktop/gr-satcom_gmu/build/python/__init__.pyo"
     "/home/mattias/Desktop/gr-satcom_gmu/build/python/utils.pyo"
     "/home/mattias/Desktop/gr-satcom_gmu/build/python/signal_field_preamble.pyo"
@@ -83,6 +85,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/home/mattias/Desktop/gr-satcom_gmu/build/python/wifi_interleaver.pyo"
     "/home/mattias/Desktop/gr-satcom_gmu/build/python/conv_coder.pyo"
     "/home/mattias/Desktop/gr-satcom_gmu/build/python/debug_sink.pyo"
+    "/home/mattias/Desktop/gr-satcom_gmu/build/python/OFDM_params.pyo"
     )
 endif()
 

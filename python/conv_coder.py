@@ -24,7 +24,7 @@ from gnuradio import gr
 from utils import parity, indx_gen
 import pmt
 
-class conv_coder(gr.interp_block):
+class conv_coder(gr.sync_block):
     """
     docstring for block conv_coder
     """
@@ -36,13 +36,18 @@ class conv_coder(gr.interp_block):
         self.puncture2 = np.array([1,0,1,1,0,1,1,0,1])
         self.punc1_inx = indx_gen(len(self.puncture1))
         self.punc2_inx = indx_gen(len(self.puncture2))
-        gr.interp_block.__init__(self,
+        gr.sync_block.__init__(self,
             name="conv_coder",
             in_sig=[np.uint8],
             out_sig=[np.uint8], 
-            interp=2)
+            )
         # self.set_tag_propagation_policy(0) # dont propagate tags
     
+    def forecast(self, noutput_items, ninput_items_required):
+        #setup size of input_items[i] for work call
+        for i in range(len(ninput_items_required)):
+            ninput_items_required[i] = (3) * noutput_items
+
     def code_bit(self,bit):
         # print("debug message")
         # print("bit: {}, uint8: {}, type: {}".format(bit,np.uint8(bit),type(bit)))
@@ -56,18 +61,20 @@ class conv_coder(gr.interp_block):
         return np.array([bit1,bit2],dtype=np.uint8)
         
 
-
-    def work(self, input_items, output_items):
+    
+    def general_work(self, input_items, output_items):
         in0 = input_items[0]
         out = output_items[0]
-
+        print("encoder n items written {}".format(self.nitems_written(0))) 
         # tags = self.get_tags_in_window(0,0,len(in0),pmt.intern("packet_len"))
         # for tag in tags:
-        #     key = pmt.to_python(tag.key)
         #     value = pmt.to_python(tag.value)
-        #     offset = tag.offset
-        #     self.add_item_tag(0,offset,tag.key,pmt.from_long(value*2))
-        #     print("tag: {}, value: {}, offset: {}".format(key,value,offset))
+        #     tag.value = pmt.from_long(long(value * (4/3.0)))
+        #     old_offset = tag.offset
+        #     tag.offset = long(tag.offset * (4/3.0))
+        #     self.add_item_tag(0,tag)
+        #     # print("tag found at offset: {}, new_offset: {}".format(old_offset,tag.offset))
+        #     # print("tag: {}, value: {}, offset: {}, type value: {}".format(key,value,offset,type(value)))
         assert(not (len(out) % 2))
         out_indx = 0
         for i in range(0,len(in0)):

@@ -42,7 +42,8 @@ GR_PYTHON_INSTALL(
     data_formatter.py
     wifi_interleaver.py
     conv_coder.py
-    debug_sink.py DESTINATION ${GR_PYTHON_DIR}/satcom_gmu
+    debug_sink.py
+    OFDM_params.py DESTINATION ${GR_PYTHON_DIR}/satcom_gmu
 )
 
 ########################################################################

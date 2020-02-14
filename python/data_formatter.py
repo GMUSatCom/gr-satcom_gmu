@@ -37,6 +37,7 @@ class data_formatter(gr.sync_block):
         self.n_sym = 0
         self.n_data = 0
         self.n_pad = 0
+        self.offset = long(0)
         gr.sync_block.__init__(self,
             name="data_formatter",
             in_sig=None,
@@ -53,30 +54,34 @@ class data_formatter(gr.sync_block):
         n_pad = n_data - (16 + data_len)
 
         assert(not (n_pad % 8))
-        print("n_pad: {}".format(n_pad))
+        # print("n_pad: {}".format(n_pad))
         scrambler_initiation = np.array([0,0],dtype=np.uint8)
         data = np.concatenate((scrambler_initiation,data,np.zeros(int(n_pad/8),dtype=np.uint8)))
         # print("n_data: {},dataLen: {},data: {}".format(n_data,data.size,data))
 
         self.buffer = np.append(self.buffer,data)
 
-        self.packet_len = len(self.buffer)
-        print("packet_len: {}".format(self.packet_len))
+        self.packet_len = long(len(self.buffer))
+        # print("packet_len: {}".format(self.packet_len))
         self.insert_tag = True
 
 
 
     def work(self, input_items, output_items):
         out = output_items[0]
-        produced = 0
+        produced = long(0)
         
+        # print(self.insert_tag)
+        # print(self.offset)
         for o in range(0,len(out)):
             if self.insert_tag:
-                self.add_item_tag(0,self.nitems_written(0) + o,pmt.intern("packet_len"),pmt.from_long(self.packet_len*2*8))
+                self.add_item_tag(0,self.offset + long(o),pmt.intern("packet_len"),pmt.from_long(self.packet_len))
+                # print("a tag was inserted into the stream. offset: {}".format(self.offset))
                 self.insert_tag = False 
 
             if len(self.buffer) > 0:
                 out[o] = self.buffer[0]
                 self.buffer = self.buffer[1:]
                 produced += 1
+        self.offset += produced
         return produced

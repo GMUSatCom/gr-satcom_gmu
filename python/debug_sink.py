@@ -36,7 +36,8 @@ class debug_sink(gr.sync_block):
     def work(self, input_items, output_items):
         in0 = input_items[0]
         print("======DEBUG======")
-        print(in0[0])
+        for i in in0:
+            print(i)
         # <+signal processing here+>
         return len(input_items[0])
 

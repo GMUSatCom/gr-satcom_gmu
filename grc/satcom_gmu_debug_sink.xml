@@ -14,8 +14,9 @@
 
   <param>
   <name>Vector Length</name>
-  <key>vec_len</key>
-  <type>int</type>
+    <key>vec_len</key>
+    <value>1</value>
+    <type>int</type>
   </param>
 
 
@@ -23,8 +24,8 @@
   <param>
     <name>Vector Type</name>
     <key>vec_type</key>
+    <value>$byte</value>
 		<type>enum</type>
-    <!-- <value>byte</value> -->
 		<option>
 			<name>Complex</name>
 			<key>complex</key>
@@ -33,7 +34,7 @@
 		<option>
 			<name>Float</name>
 			<key>float</key>
-      <opt>size:np.float</opt>
+      <opt>size:np.float32</opt>
 		</option>
 		<option>
 			<name>Integer</name>

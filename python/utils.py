@@ -33,7 +33,7 @@ class OFDM_Params:
         self.r = 1.0/2.0
     def vec_test(self):
         test_bytes = '\x04\x02\x00\x2E\x00\x60\x08\xCD\x37\xA6\x00\x20\xD6\x01\x3C\xF1\x00\x60\x08\xAD\x3B\xAF\x00\x00' + 'Joy, bright spark of divinity, Daughter of Elysium, Fire-insired we trea' + '\x67\x33\x21\xb6'
-        print(len(test_bytes))
+        # print(len(test_bytes))
         vec = np.fromstring(test_bytes,dtype=np.uint8)
         pmt_vec = pmt.make_u8vector(len(vec),0)
         for i,val in enumerate(vec):

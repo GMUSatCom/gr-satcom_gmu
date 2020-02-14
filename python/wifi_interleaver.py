@@ -55,6 +55,7 @@ class wifi_interleaver(gr.decim_block):
             self.second[i] = s*(i/s) + (i + ncbps - (16*i)/ncbps) % s
 
     def work(self, input_items, output_items):
+        print("interleaver items read: {}".format(self.nitems_read(0)))
         in0 = input_items[0]
         out = output_items[0]
         # print("=========DEBUG OUTPUT=========")
@@ -65,8 +66,8 @@ class wifi_interleaver(gr.decim_block):
             key = pmt.to_python(tag.key)
             value = pmt.to_python(tag.value)
             offset = tag.offset
-            self.add_item_tag(0,offset,tag.key,pmt.from_long(value/192))
-            print("tag: {}, value: {}, offset: {}".format(key,pmt.intern("symbol_num"),offset))
+            # self.add_item_tag(0,offset,tag.key,pmt.from_long(value/192))
+            print("tag: {}, value: {}, offset: {}".format(key,value,offset))
 
         reverse = False
         assert(len(in0) % self.ncbps == 0)

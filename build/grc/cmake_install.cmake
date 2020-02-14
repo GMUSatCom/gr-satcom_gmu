@@ -48,6 +48,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/home/mattias/Desktop/gr-satcom_gmu/grc/satcom_gmu_wifi_interleaver.xml"
     "/home/mattias/Desktop/gr-satcom_gmu/grc/satcom_gmu_conv_coder.xml"
     "/home/mattias/Desktop/gr-satcom_gmu/grc/satcom_gmu_debug_sink.xml"
+    "/home/mattias/Desktop/gr-satcom_gmu/grc/satcom_gmu_OFDM_params.xml"
     )
 endif()
 
