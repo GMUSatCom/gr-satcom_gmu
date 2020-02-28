@@ -1,8 +1,0 @@
-# CMake generated Testfile for 
-# Source directory: /home/mattias/Desktop/gr-satcom_gmu/python
-# Build directory: /home/mattias/Desktop/gr-satcom_gmu/build/python
-# 
-# This file includes the relevant testing commands required for 
-# testing this directory and lists subdirectories to be tested as well.
-add_test(qa_signal_field_preamble "/bin/sh" "/home/mattias/Desktop/gr-satcom_gmu/build/python/qa_signal_field_preamble_test.sh")
-add_test(qa_wifi_scrambler "/bin/sh" "/home/mattias/Desktop/gr-satcom_gmu/build/python/qa_wifi_scrambler_test.sh")
