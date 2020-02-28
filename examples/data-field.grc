@@ -1177,7 +1177,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1190,6 +1190,53 @@
     <param>
       <key>id</key>
       <value>blocks_null_sink_1</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>byte</value>
+    </param>
+    <param>
+      <key>num_inputs</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_null_sink</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bus_conns</key>
+      <value>[[0,],]</value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(584, 520)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_null_sink_2</value>
     </param>
     <param>
       <key>type</key>
@@ -1287,7 +1334,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>endianness</key>
@@ -1346,7 +1393,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(320, 572)</value>
+      <value>(560, 564)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1355,6 +1402,61 @@
     <param>
       <key>id</key>
       <value>blocks_tag_debug_0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>byte</value>
+    </param>
+    <param>
+      <key>filter</key>
+      <value>"packet_len"</value>
+    </param>
+    <param>
+      <key>name</key>
+      <value>Packet Length</value>
+    </param>
+    <param>
+      <key>num_inputs</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_tag_debug</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>display</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(344, 596)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_tag_debug_0_0</value>
     </param>
     <param>
       <key>type</key>
@@ -1507,7 +1609,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1562,7 +1664,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2814,7 +2916,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(352, 520)</value>
+      <value>(384, 520)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2916,6 +3018,45 @@
     </param>
   </block>
   <block>
+    <key>satcom_gmu_debug_sink</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(528, 472)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>satcom_gmu_debug_sink_1</value>
+    </param>
+    <param>
+      <key>vec_len</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>vec_type</key>
+      <value>byte</value>
+    </param>
+  </block>
+  <block>
     <key>satcom_gmu_wifi_interleaver</key>
     <param>
       <key>nbpsc</key>
@@ -2939,7 +3080,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2982,7 +3123,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(176, 460)</value>
+      <value>(216, 460)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3127,7 +3268,19 @@
   </connection>
   <connection>
     <source_block_id>satcom_gmu_conv_coder_0</source_block_id>
+    <sink_block_id>blocks_null_sink_2</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>satcom_gmu_conv_coder_0</source_block_id>
     <sink_block_id>blocks_tag_debug_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>satcom_gmu_conv_coder_0</source_block_id>
+    <sink_block_id>satcom_gmu_debug_sink_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -3152,6 +3305,12 @@
   <connection>
     <source_block_id>satcom_gmu_wifi_interleaver_0</source_block_id>
     <sink_block_id>blocks_vector_to_stream_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>satcom_gmu_wifi_scrambler_0</source_block_id>
+    <sink_block_id>blocks_tag_debug_0_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>

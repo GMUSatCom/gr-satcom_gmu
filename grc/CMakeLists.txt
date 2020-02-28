@@ -26,5 +26,6 @@ install(FILES
     satcom_gmu_wifi_interleaver.xml
     satcom_gmu_conv_coder.xml
     satcom_gmu_debug_sink.xml
-    satcom_gmu_OFDM_params.xml DESTINATION share/gnuradio/grc/blocks
+    satcom_gmu_OFDM_params.xml
+    satcom_gmu_puncturer.xml DESTINATION share/gnuradio/grc/blocks
 )
